@@ -1,4 +1,4 @@
-package io.derl.helium_3;
+package io.derl.helium3;
 
 import org.junit.Test;
 

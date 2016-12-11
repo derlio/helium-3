@@ -1,4 +1,4 @@
-package io.derl.helium_3;
+package io.derl.log;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -16,11 +16,19 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
+
+    public static final String TAG = Log.makeLogTag(ExampleInstrumentedTest.class);
+
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("io.derl.helium_3", appContext.getPackageName());
+        assertEquals("io.derl.log.test", appContext.getPackageName());
+    }
+
+    @Test
+    public void testLog(){
+        Log.d(TAG, "HELLO LOG");
     }
 }
